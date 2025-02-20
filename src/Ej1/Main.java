@@ -34,25 +34,32 @@ public class Main {
 
     public static void devolverNumeros(int n) {
         int sumatotal = 0; // aqui guardaremos la suma total
-
+        // IMpresion del numero que introduce el usuario para mas claridad visual
         System.out.print("N = " + n + "\n");
 
         for (int i = 1; i <= n; i++) {
+            // Almacenamos el índice (numero actual) para hacer operaciones sobre el
             int numeroAlmacenado = i;
             boolean esPrimerDigito = true;
 
-            if (i > 9) System.out.print("(");
-            while (numeroAlmacenado > 0) {
-                if (!esPrimerDigito) System.out.print(" + ");
-                System.out.print(numeroAlmacenado % 10);
+            if (i > 9)
+                System.out.print("(");  // Si el numero es mayor a 9 (tiene más de un dígito), imprimimos un parentesis de apertura
+
+            while (numeroAlmacenado > 0) {  // Mientras el numero tenga digitos (es decir, no sea 0)
+                if (!esPrimerDigito)
+                    System.out.print(" + ");
+                System.out.print(numeroAlmacenado % 10);  // Imprimimos el ultimo dígito del numero actual (resiiduo)
                 sumatotal += numeroAlmacenado % 10;
+                // Eliminamos el último dígito del número (dividiendo entre 10)
                 numeroAlmacenado /= 10;
+
                 esPrimerDigito = false;
             }
-            if (i > 9) System.out.print(")");
-            if (i < n) System.out.print(" + ");
-        }
-        System.out.println(" = " + sumatotal);
-    }
 
+            if (i > 9) System.out.print(")");  // Si el numero era mayor a 9, cerramos el parentesis
+            if (i < n)
+                System.out.print(" + ");  // Si no hemos llegado al ultimo número, imprimimos un "+" entre los numeros
+        }
+        System.out.println(" = " + sumatotal);  // Imprimimos el resultado final de la suma de todos los digitos
+    }
 }
