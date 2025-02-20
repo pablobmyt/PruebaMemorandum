@@ -1,7 +1,7 @@
 <h1>Instrucciones para la ejecucion del codigo.</h1>
 
 
-Clonar el repositorio:
+Clonar el repositorio: <br><br>
 git clone https://github.com/pablobmyt/PruebaMemorandum.git //en el caso de hacerlo por consola, si se usa github desktop, simplemente pasarle la url
 
 Importariamos el proyecto al IDE que estemos usando, yo personalmente estoy utilizando IntelliJ Idea Community Edition 2024.
